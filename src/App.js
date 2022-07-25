@@ -7,33 +7,32 @@ import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Notes from "./pages/Notes/Notes";
 function App() {
-	return (
-		<div className="App">
-			<BrowserRouter>
-				<Layout>
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/crypto" element={<Crypto simplified={false} />} />
-						<Route path="/news" element={<News simplified={false} />} />
-						<Route path="/detail/:id" element={<Detail />} />
-						<Route path="/notes" element={<Notes />} />
-						<Route
-							path="*"
-							element={
-								<>
-									<div>404 Not Found</div> <br />
-									<Link to="/">
-										{" "}
-										<button color="primary"> go to home </button>
-									</Link>
-								</>
-							}
-						/>
-					</Routes>
-				</Layout>
-			</BrowserRouter>
-		</div>
-	);
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/crypto" element={<Crypto simplified={false} />} />
+            <Route path="/news" element={<News simplified={false} />} />
+            <Route path="/detail/:id" element={<Detail />} />
+            <Route
+              path="*"
+              element={
+                <>
+                  <div>404 Not Found</div> <br />
+                  <Link to="/">
+                    {" "}
+                    <button color="primary"> go to home </button>
+                  </Link>
+                </>
+              }
+            />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
