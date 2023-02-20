@@ -4,8 +4,7 @@ import Crypto from "./pages/crypto/Crypto";
 import News from "./pages/news/News";
 import Detail from "./pages/cryptoDetails/Detail";
 import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Notes from "./pages/Notes/Notes";
+import Error from "./components/Error/Error";
 function App() {
   return (
     <div className="App">
